@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tour Of Dom</title>
+    <link rel="stylesheet" href="styles/style.css">
+    <style>
+        .important-place{
+            color : blue ;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Welcome to My Dom</h1>
+        <ul>
+            <li>ariful</li>
+        </ul>
+    </header>
+    
+    <main>
+        <section>
+            <h1>My Awosome dom de</h1>
+        <ul>
+            <li>jalai </li>
+            <li>achi re vai </li>
+            <li>safaet </li>
+        </ul>
+        </section>
+        <section class="fruits-container">
+            <h1>fruits name</h1>
+            <ul>
+                <li class="fruit">apple</li>
+                <li>bannana</li>
+                <li>peyera</li>
+            </ul>
+        </section>
+        <section>
+            <h1 id="title" class=" nr blue-bg hello dk" >places visit</h1>
+            <ul>
+                <li id="capital" class="sine diiks jdjd">Dhaka</li>
+                <li>Jamalur</li>
+                <li>Mymensing</li>
+            </ul>
+        </section>
+        <section>
+            <h1>Importanst places</h1>
+            <ul>
+                <li class="important-place">sundorban</li>
+                <li class="important-place">bandorban</li>
+                <li class="important-place" >katabon</li>
+            </ul>
+        </section>
+        <section class="cheek">
+            <!-- <h3>he3ll</h3> -->
+
+        </section>
+    </main>
+    <script src="script/dom.js"></script>
+    <script src="js/styleinjs.js"></script>
+    <script>
+        document.getElementById('capital').innerText = 'jamalpur'
+        const places = document.getElementsByClassName('important-place');
+        for (const place of places){
+            // console.log(place.innerText);
+        }
+        const licolection = document.getElementsByTagName('li') ;
+        for(const li of licolection){
+            // console.log(li.innerText);
+        }
+        const allheading = document.getElementsByTagName('h1');
+        for(const heading of allheading){
+            // console.log(heading.innerText)
+        }
+    </script>
+</body>
+</html>

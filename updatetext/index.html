@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Update Text With event handelers</title>
+</head>
+<body>
+    <h1 id ='header-status'>Default Text</h1>
+    <button onclick="handleOnClick()">Handle by onclick function</button>
+    <button id = 'event-listner'>Handle event by addeventlistener</button>
+    <script>
+        // system 1
+        function handleOnClick (){
+        const handelsHeaderStatus = document.getElementById('header-status');
+        handelsHeaderStatus.innerText = 'I am changing text with onclick'
+        }
+        // system 2
+        const handesButton = document.getElementById('event-listner');
+        handesButton.addEventListener('click', function(){
+            const headerStatus = document.getElementById('header-status');
+            headerStatus.innerText = 'wow chainging with addeventlistners'
+        })
+    </script>
+</body>
+</html>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Please Add Comment</title>
+</head>
+
+<body>
+    <div id="container">
+        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Itaque delectus quam necessitatibus suscipit a eius
+            voluptatibus facere quisquam unde iste, velit accusantium odio! Id in placeat suscipit laudantium
+            reprehenderit velit quam, voluptas incidunt unde ipsum nobis quae! Adipisci quasi totam voluptatum inventore
+            enim? Veritatis magni eligendi omnis, praesentium doloremque sit!</p>
+        <p>Impedit inventore voluptates quas officiis dolor commodi reiciendis voluptatum sed officia praesentium, quos
+            dolore blanditiis, asperiores voluptate ab magnam eaque laboriosam perferendis illo! Vero molestias, sed
+            quibusdam fuga perspiciatis eius harum sunt modi deleniti! Natus fugiat dolor harum perferendis, tempora
+            fugit dolorem dolore quam iusto odio fuga voluptate doloribus impedit?</p>
+        <p>Et natus facilis voluptas ab, architecto, esse distinctio odit atque pariatur quod molestiae minima animi!
+            Necessitatibus dolorem ratione, accusantium neque repellat debitis commodi atque ex a incidunt hic nam, eius
+            nemo aliquid placeat voluptatibus natus. Aliquam doloribus, velit, nesciunt minus, obcaecati harum dolore
+            deserunt fugit voluptatem libero exercitationem dolorum. Molestiae!</p>
+    </div>
+    <div>
+        <textarea id="text-box" cols="80" rows="8"></textarea>
+        <br>
+        <button id="btn-post">Post</button>
+    </div>
+    <script>
+        document.getElementById('btn-post').addEventListener('click', function(){
+            const textBox = document.getElementById('text-box');
+            const inputText = textBox.value ;
+            const containerPosts = document.getElementById('container') ;
+            const newPost = document.createElement('p');
+            containerPosts.appendChild(newPost);
+            newPost.innerText = inputText ;
+            textBox.value = " " ;
+        })
+    </script>
+</body>
+
+</html>

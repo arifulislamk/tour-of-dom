@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Js Dom Events</title>
+</head>
+<body>
+<button onclick="console.log('click')">click Me</button>
+<!-- option 1 -->
+<button onclick="document.body.style.backgroundColor = 'yellow' ">Make Yellow</button>
+<button onclick="makeRed()">Make Red</button>
+<button id ='make-blue'>Make Blue</button>
+<button id = 'make-pink'>Make Pink</button>
+<button id = 'make-green'>Make Green</button>
+<script>
+    // <!-- system2 -->
+function makeRed(){
+    document.body.style.backgroundColor = 'red';
+}
+// system 3
+const makeBlueButton = document.getElementById('make-blue');
+makeBlueButton.onclick = makeblue;
+function makeblue(){
+    document.body.style.backgroundColor = 'blue';
+}
+// system4
+const makeGreenButton = document.getElementById('make-green');
+makeGreenButton.addEventListener('click', makeGreen);
+function makeGreen(){
+    document.body.style.backgroundColor = 'green';
+}
+// system4final
+const makePinkButton = document.getElementById('make-pink');
+makePinkButton.addEventListener('click', function makePink(){
+    document.body.style.backgroundColor = 'pink' ;
+})
+</script>
+</body>
+</html>

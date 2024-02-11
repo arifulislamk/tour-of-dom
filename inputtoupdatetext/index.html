@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Input To Update Text</title>
+</head>
+
+<body>
+    <p id="p-text">Default Text</p>
+    <input id="input-box" type="text" name="" id="">
+    <button id="btn-update">Update</button>
+    <script>
+        const updateButton = document.getElementById('btn-update');
+        updateButton.addEventListener('click', function(){
+            const inputBox = document.getElementById('input-box');
+            const inputText = inputBox.value;
+            const p = document.getElementById('p-text');
+            p.innerText = inputText;
+            inputBox.value = " " ;
+        })
+    </script>
+</body>
+
+</html>
